@@ -9,7 +9,7 @@ services:
   - docker
 
 script:
-  docker build -t $CONTAINER_NAME:$CONTAINER_TAG ./ubuntu/standalone/Dockerfile
+  docker build -t $CONTAINER_NAME:$CONTAINER_TAG -f ./ubuntu/standalone/Dockerfile .
 
 deploy:
   provider: script
