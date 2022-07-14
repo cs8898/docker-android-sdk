@@ -17,6 +17,6 @@ extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.
 lldb
 ndk-bundle
 platform-tools
-platforms;android-29
-platforms;android-30
+platforms;android-31
+platforms;android-32
 tools
