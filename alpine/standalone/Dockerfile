@@ -2,7 +2,7 @@ FROM alpine:latest
 
 LABEL de.mindrunner.android-docker.flavour="alpine-standalone"
 
-ARG GLIBC_VERSION="2.28-r0"
+ARG GLIBC_VERSION="2.35-r1"
 
 ENV ANDROID_SDK_HOME /opt/android-sdk-linux
 ENV ANDROID_SDK_ROOT /opt/android-sdk-linux
@@ -23,7 +23,7 @@ RUN apk -U update && apk -U add \
   libstdc++ \
   libgcc \
   mesa-dev \
-  openjdk11 \
+  openjdk17 \
   pulseaudio-dev \
   su-exec \
   ncurses \
