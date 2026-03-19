@@ -23,7 +23,7 @@ RUN apk -U update && apk -U add \
   libstdc++ \
   libgcc \
   mesa-dev \
-  openjdk17 \
+  openjdk25 \
   pulseaudio-dev \
   su-exec \
   ncurses \

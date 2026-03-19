@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:24.04
 
 LABEL de.mindrunner.android-docker.flavour="ubuntu-lazydl"
 
@@ -22,7 +22,7 @@ RUN dpkg --add-architecture i386 && apt-get update -yqq && apt-get install -y \
   libncurses5:i386 \
   libstdc++6:i386 \
   zlib1g:i386 \
-  openjdk-17-jdk \
+  openjdk-25-jdk \
   wget \
   unzip \
   vim \

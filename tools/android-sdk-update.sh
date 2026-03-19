@@ -1,5 +1,7 @@
 #!/bin/bash
 
+COMMANDLINETOOLS_URL=https://dl.google.com/android/repository/commandlinetools-linux-14742923_latest.zip
+
 mkdir -p /opt/android-sdk-linux/bin/
 cp /opt/tools/android-env.sh /opt/android-sdk-linux/bin/
 source /opt/android-sdk-linux/bin/android-env.sh
@@ -28,7 +30,7 @@ then
 else
     echo "Bootstrapping SDK-Tools"
     mkdir -p cmdline-tools/latest/ \
-      && curl -sSL http://dl.google.com/android/repository/commandlinetools-linux-7583922_latest.zip -o sdk-tools-linux.zip \
+      && curl -sSL ${COMMANDLINETOOLS_URL} -o sdk-tools-linux.zip \
       && bsdtar xvf sdk-tools-linux.zip --strip-components=1 -C cmdline-tools/latest \
       && rm sdk-tools-linux.zip \
       && touch .bootstrapped
