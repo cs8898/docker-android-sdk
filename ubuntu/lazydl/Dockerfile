@@ -19,7 +19,7 @@ RUN apt-get update -yqq && apt-get install -y \
   make \
   libc6 \
   libgcc1 \
-  libncurses5 \
+  libncurses6 \
   libstdc++6 \
   zlib1g \
   openjdk-25-jdk \
@@ -35,6 +35,7 @@ RUN apt-get update -yqq && apt-get install -y \
 
 ENV LANG en_US.UTF-8
 
+RUN userdel -r $(getent passwd 1000 | cut -d: -f1) || exit 0
 RUN groupadd android && useradd -d /opt/android-sdk-linux -g android -u 1000 android
 
 COPY tools /opt/tools
